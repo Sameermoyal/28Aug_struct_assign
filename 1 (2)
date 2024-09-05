@@ -1,0 +1,32 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+struct Student {
+    
+    string name;
+    int rollno;
+    int marks[5];
+    float aver(){
+        float ans =0;
+        for(int i=0;i<5;i++){
+            ans+=marks[i];
+        }
+        return ans/5.0;
+    }
+};
+
+
+int main(){
+    
+    Student obj;
+    cout<<"enter name : ";
+    cin>>obj.name;
+     cout<<"enter roll number : ";
+    cin>>obj.rollno;
+    for(int i=0;i<5;i++){
+        cout<<"enter  subject marks : ";
+        cin>>obj.marks[i];
+    }
+    cout<<obj.aver();
+    return 0;
+}
